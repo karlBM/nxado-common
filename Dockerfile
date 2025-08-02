@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y python3-venv && rm -rf /var/lib/apt/lis
 COPY ./requirements.txt /app/requirements.txt
 
 # Install Python packages
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r ./requirements.txt
 
 # Copy app files
 COPY main.py /app/main.py
