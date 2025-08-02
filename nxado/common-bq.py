@@ -1,13 +1,7 @@
 """
 This module holds needed functions to help with google bigquery
 """
-
-from pyspark.sql import SparkSession
-
-def get_data(dataset, table, limit=None):
-    spark = SparkSession.builder \
-        .appName("BigQueryQuery") \
-        .getOrCreate()
+def get_data(spark, dataset, table, limit=None):
 
     project_id = spark.conf.get("google.cloud.project.id")  # Or set your project ID explicitly
 
