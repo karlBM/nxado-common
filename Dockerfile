@@ -4,7 +4,7 @@ FROM python:3.8-slim
 RUN apt-get update && apt-get install -y python3-venv && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first
-COPY requirements.txt /app/requirements.txt
+COPY ./requirements.txt /app/requirements.txt
 
 # Install Python packages
 RUN pip3 install -r requirements.txt
